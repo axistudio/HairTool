@@ -1,0 +1,33 @@
+﻿using GPUTools.Physics.Scripts.Core;
+
+namespace GPUTools.Physics.Scripts.Joints
+{
+    public struct GPDistanceJoint:IGroupItem
+    {
+        public int Body1Id;
+        public int Body2Id;
+
+        public float Distance;
+
+        public GPDistanceJoint(int body1Id, int body2Id, float distance)
+        {
+            Body1Id = body1Id;
+            Body2Id = body2Id;
+            Distance = distance;
+        }
+
+        public static int Size()
+        {
+            return sizeof(float) + sizeof(int)*2;
+        }
+
+        public bool HasConflict(IGroupItem item)
+        {
+            var joint = (GPDistanceJoint) item;
+            return joint.Body1Id == Body1Id
+                   || joint.Body2Id == Body1Id
+                   || joint.Body1Id == Body2Id
+                   || joint.Body2Id == Body2Id;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+﻿#pragma kernel CSIntegrate
+#pragma kernel CSCollisions
+#pragma kernel CSDistanceJoints
+#pragma kernel CSPointJoints
+
+#include "Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc"
+#include "Assets/GPUTools/Physics/Shaders/Compute/GPDistanceJoint.cginc"
+#include "Assets/GPUTools/Physics/Shaders/Compute/GPPointJoint.cginc"
+#include "Assets/GPUTools/Physics/Shaders/Compute/GPSphereCollider.cginc"
+#include "Assets/GPUTools/Physics/Shaders/Compute/GPLineSphereCollider.cginc"
+
+/// --------------------------------------- INPUT
+
+float drag;
+float dt;
+float3 gravity;
+float4 wind;
+
+RWStructuredBuffer<float4x4> matrices;
+
+RWStructuredBuffer<Body> bodies;
+RWStructuredBuffer<SphereCollider> sphereColliders;
+
+RWStructuredBuffer<Body> kinematicBodies;
+RWStructuredBuffer<SphereCollider> kinematicSphereColliders;
+RWStructuredBuffer<LineSphereCollider> kinematicsLineSphereColliders;
+
+RWStructuredBuffer<PointJoint> pointJoints;
+RWStructuredBuffer<DistanceJoint> distanceJoints;
+
+/// --------------------------------------- FUNCTIONS
+
+[numthreads(1024,1,1)]
+void CSIntegrate (uint3 id : SV_DispatchThreadID)
+{
+	Integrate(bodies, id, gravity, drag, dt);
+	Wind(bodies, id, wind, dt);
+}
+
+[numthreads(1024,1,1)]
+void CSCollisions (uint3 id : SV_DispatchThreadID)
+{
+	SphereSphereColisionSolve(sphereColliders[id.x], bodies, kinematicBodies, kinematicSphereColliders, dt);
+	SphereLineSphereColisionSolve(sphereColliders[id.x], bodies, kinematicBodies, kinematicsLineSphereColliders, dt);
+}
+
+int startDistanceJointGroup;
+int sizeDistanceJointGroup;
+
+[numthreads(1024,1,1)]
+void CSDistanceJoints (uint3 id : SV_DispatchThreadID)
+{
+	int i = startDistanceJointGroup + id.x;
+	if(i < startDistanceJointGroup + sizeDistanceJointGroup)
+	{
+		DistanceJointsSolve(distanceJoints[i], bodies, dt);
+	}
+}
+
+[numthreads(1024,1,1)]
+void CSPointJoints (uint3 id : SV_DispatchThreadID)
+{
+	PointJointSolve(pointJoints[id.x], bodies, matrices, dt);
+}

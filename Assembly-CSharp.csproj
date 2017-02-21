@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{5D12758E-5C27-6195-68C4-8686E99A6562}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_1;UNITY_5_5;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VIDEO;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\Abstract\IScalpProvider.cs" />
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\Providers\SkinnedMeshScalpProvider.cs" />
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\Providers\StaticMeshScalpProvider.cs" />
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\ScalpMeshProvider.cs" />
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\Skinning\ScalpGPUSkinner.cs" />
+     <Compile Include="Assets\GPUTools\Common\Geometry\Importer\Skinning\ScalpSkinUtils.cs" />
+     <Compile Include="Assets\GPUTools\Common\Tools\CacheProvider.cs" />
+     <Compile Include="Assets\GPUTools\Common\Tools\ExecuteTimer.cs" />
+     <Compile Include="Assets\GPUTools\Common\Tools\MeshDebuger.cs" />
+     <Compile Include="Assets\GPUTools\Common\Tools\Validator.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Abstract\GeometryProviderBase.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Create\CreatorGeometry.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Create\GeometryBrush.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Create\GeometryGroupData.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Create\GeometryGroupHistory.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Create\HairGeometryCreator.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Import\GeometryImporter.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Import\HairGroupsProvider.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Madness\HairGoupsEngine.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Tools\MeshUtils.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Geometry\Tools\ScalpProcessingTools.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Physics\GPHairPhysics.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Render\HairRender.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Abstract\HairSettingsBase.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Abstract\HairShadowSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Colors\GeometryColorProvider.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Colors\IColorProvider.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Colors\ListColorProvider.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\Colors\RootTipColorProvider.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\HairLODSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\HairPhysicsSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\HairRenderSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\HairStandsSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\Data\UpdatableField.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\Data\BodyData.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\Data\GPHairPhysicsData.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\Data\GPHairRenderData.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPBarycentricBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPHairBodyDataBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPHairBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPHairJointsBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPHairStandsBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\GPKinematicBuilder.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\GPBuilders\Tools\MultiArray.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\HairJointArea.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Settings\HairSettings.cs" />
+     <Compile Include="Assets\GPUTools\Hair\Scripts\Utils\GeometryUtils.cs" />
+     <Compile Include="Assets\GPUTools\HairDemo\Scripts\BallsDemo\BallController.cs" />
+     <Compile Include="Assets\GPUTools\HairDemo\Scripts\ShowStylesDemo\DemoCamera.cs" />
+     <Compile Include="Assets\GPUTools\HairDemo\Scripts\ShowStylesDemo\DemoView.cs" />
+     <Compile Include="Assets\GPUTools\HairDemo\Scripts\Tools\FpsCounter.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Abstract\GPItem.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Collisions\Behaviours\LineSphereCollider.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Collisions\CapsuleTests.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Collisions\GPLineSphereCollider.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Collisions\GPSphereCollider.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\ArrayRange.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\ArrayUtils.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\CascadableArray.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\ComputeBufferWrapper.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\ComputeWrapper.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\CurveTest.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\GroupedData.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Core\UpdatableArray.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\DebugDraw\GPDebugDraw.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Dynamics\GPBody.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\GPTest.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Joints\GPDistanceJoint.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Joints\GPPointJoint.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Wind\Perlin2D.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\Wind\WindReceiver.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\World\GPData.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\World\GPWorld.cs" />
+     <Compile Include="Assets\GPUTools\Physics\Scripts\World\GPWorldBuilder.cs" />
+     <None Include="Assets\GPUTools\Hair\Shaders\Hair.shader" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPDistanceJoint.cginc" />
+     <None Include="Assets\GPUTools\Hair\Shaders\Include\HairTypes.cginc" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPBody.cginc" />
+     <None Include="Assets\GPUTools\Common\Shaders\Compute\ScalpSkinner.compute" />
+     <None Include="Assets\GPUTools\HairDemo\Scripts\Shaders\TestPointLight.shader" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPSphereCollider.cginc" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPWorld.compute" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPLineSphereCollider.cginc" />
+     <None Include="Assets\GPUTools\Physics\Shaders\Compute\GPPointJoint.cginc" />
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PlaymodeTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
