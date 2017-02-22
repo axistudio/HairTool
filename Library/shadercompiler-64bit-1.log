@@ -1,0 +1,30 @@
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-4352
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=19719 outsize=1303 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (111): undeclared identifier 'unity_ObjectToWorld'\nCompiling Vertex program with DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
+  api=4 type=0 insize=6450 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=0
+Cmd: preprocess
+  insize=3657 outsize=664 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (38): undeclared identifier 'unity_ObjectToWorld'\nCompiling Vertex program
+  api=4 type=0 insize=1430 outsize=0 kw= pd= ok=0
+Cmd: compileCompute
+  error: 1 plat 4 at ScalpSkinner.compute(37): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(38): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(39): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(40): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(41): comma expression used where a vector constructor may have been intended
+  api=4 insize=897 outsize=3237 ok=1
+Cmd: compileCompute
+  error: 1 plat 4 at ScalpSkinner.compute(37): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(38): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(39): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(40): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(41): comma expression used where a vector constructor may have been intended
+  api=4 insize=897 outsize=3237 ok=1
+Cmd: compileCompute
+
+Crashed!

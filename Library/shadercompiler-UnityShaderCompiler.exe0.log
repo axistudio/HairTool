@@ -1,0 +1,16 @@
+Base path: C:/Program Files/Unity 5.5.1f1/Editor/Data
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=19719 outsize=1063 ok=1
+Cmd: preprocess
+  insize=3657 outsize=599 ok=1
+Cmd: compileCompute
+  error: 1 plat 4 at ScalpSkinner.compute(37): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(38): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(39): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(40): comma expression used where a vector constructor may have been intended
+  error: 1 plat 4 at ScalpSkinner.compute(41): comma expression used where a vector constructor may have been intended
+  api=4 insize=897 outsize=3257 ok=1
+Cmd: compileCompute
+  error: 1 plat 4 at GPWorld.compute(37): 'Wind': implicit truncation of vector type
+  api=4 insize=1985 outsize=5741 ok=1

@@ -1,0 +1,18 @@
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-4352
+Cmd: getPlatforms
+Cmd: compileCompute
+  error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
+  api=4 insize=1985 outsize=101 ok=0
+Cmd: compileCompute
+  error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
+  api=4 insize=1985 outsize=101 ok=0
+Cmd: compileCompute
+  error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
+  api=15 insize=1985 outsize=101 ok=0
+Cmd: compileCompute
+  error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
+  api=9 insize=1985 outsize=101 ok=0
+Cmd: compileCompute
+  error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
+  api=4 insize=1985 outsize=101 ok=0
