@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GPUTools/HairDemo/Scenes/Demo.unity
+- path: Assets/GPUTools/Sences/DancerWithHair.unity
   isLoaded: 1
   isActive: 1

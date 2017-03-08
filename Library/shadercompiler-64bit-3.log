@@ -1,5 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-4352
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-3-8612
 Cmd: getPlatforms
 Cmd: compileCompute
   error: 2 plat 4 at GPWorld.compute(6): failed to open source file: 'Assets/GPUTools/Physics/Shaders/Compute/GPBody.cginc'
